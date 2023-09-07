@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.aviso {
+    display: none;
+}
+
+:root {
+    --background: #282C33;
+    --text-color: #ABB2BF;
+    --primary: #C778DD;
+}
+
+body {
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Fira Code', monospace;
+    color: var(--text-color);
+    position: relative;
+}
+.minhaimg{
+    width: 100%;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.container {
+    width: 75VW;
+}
+
+/* INICIO DA HEADER */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px 0 16px 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 999;
+    background: var(--background);
+    box-shadow: 0px 1px rgba(104, 104, 104, 0.118);
+    top: 0;
+}
+
+header .name {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: default;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+header ul {
+    display: flex;
+    gap: 30px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul a:hover {
+    color: white;
+}
+
+header ul a {
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 500ms;
+    font-weight: 500;
+}
+
+header ion-icon {
+    display: none;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.media {
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.media hr {
+    height: 120px;
+    border: none;
+    border-left: 1px solid var(--text-color);
+}
+
+.media ion-icon {
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 500ms, color 500ms;
+}
+
+.media ion-icon:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* FIM DA HEADER */
+
+/* INICIO PRESENTATION */
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    align-items: center;
+}
+
+
+
+.p-left h1 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    cursor: default;
+}
+
+.p-left p {
+    margin-bottom: 24px;
+    cursor: default;
+}
+
+.p-left button {
+    background: transparent;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid var(--primary);
+    border-radius:  3px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.p-left button:hover {
+    color: var(--primary);
+}
+
+.p-right {
+    position: relative;
+    align-items: center;
+}
+
+.p-right .dots {
+    position: absolute; 
+    bottom: 55px;
+    right: 16px;
+    width: 70px;
+}
+
+.p-right .square {
+    position: absolute;
+    left: 0;
+    padding-right: 40px;
+    top: 84px;
+    z-index: -1;
+}
+
+.p-right .dcpt-right {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--text-color);
+    border-radius:  5px;
+    padding: 5px;
+    justify-content: center;
+}
+
+.p-right .dcpt-right span {
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    border-radius: 3px;
+}
+
+.p-right .dcpt-right p {
+    font-size: 15px;
+    padding-left: 10px;
+    cursor: default;
+}
+
+.p-right .dcpt-right p span {
+    background: transparent;
+    color: white;
+    font-weight: 500;
+}
+
+/* FIM PRESENTATION */
+
+
+
+/* INICIO DO QUOTE */
+
+.quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote .q-center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 74px;
+    margin-top: 70px;
+
+}
+
+.quote .q-center p.frase {
+    color: white;
+    font-weight: 500;
+}
+
+.quote .q-center .frase {
+    padding: 25px;
+    position: relative;
+    border: 1px solid var(--text-color);
+    border-radius:  5px 5px 0 5px;
+}
+
+.quote .q-center .author {
+    padding: 16px;
+    border: 1px solid var(--text-color);
+    border-top: none;
+    color: white;
+    border-radius:  0 0 5px 5px;
+}
+
+.aspas-1 {
+    position: absolute;
+    left: 15px;
+    top: -10px;
+    background: var(--background);
+}
+
+.aspas-2 {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    background: var(--background);
+}
+.foto1{
+    border-radius: 100%;
+    width: 100%;
+    
+}
+
+/* FIM DO QUOTE */
+
+/* INICIO DO PROJECTS */
+
+.projects-frame {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    justify-content: center;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.project-title h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.project-title hr {
+    height: 1px;
+    width: 500px;
+    border: none;
+    border-bottom: 2px solid var(--primary);
+}
+
+/* FIM DO PROJECTS */
+
+
+/* COMEÇO DOS FRAMES */
+
+.frame-one {
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    width: auto;
+    margin-top: 40px;
+}
+
+.frame-one img {
+    height: 120px;
+    border-bottom: 1px solid var(--text-color);
+    border-radius:  5px 5px 0px 0px ;
+}
+
+.frame-one .tech {
+    border-bottom: 1px solid var(--text-color);
+    padding: 8px;
+}
+
+.frame-one .box {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+}
+
+.frame-one .box h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+}
+
+.frame-one .linkhub {
+    display: flex;
+    gap: 16px;
+}
+
+.frame-one .linkhub button {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius:  3px;
+    padding: 8px;
+    cursor: pointer;
+    transition: border 500ms, color 500ms;
+}
+
+.frame-one .linkhub button:hover {
+    border: 1px solid var(--primary);
+    color: white;
+}
+
+.frame-one .linkhub button ion-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+/* FIM DOS FRAMES */
+
+/* INICIO DAS SKILLS */
+
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .lft-rght {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    height: 310px;
+}
+
+.skills-left img.dots-1 {
+    width: 90px;
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    z-index: -2;
+}
+
+.skills-left img.dots-2 {
+    width: 70px;
+    position: absolute;
+    top: 170px;
+    left: 270px;
+    z-index: -2;
+}
+
+.skills-left .square-top {
+    padding: 35px;
+    border: 1px solid var(--text-color);
+    position: absolute;
+    left: 250px;
+    z-index: -2;
+}
+
+.skills-left .square-bottom {
+    padding: 30px;
+    border: 1px solid var(--text-color);
+    position: absolute; 
+    top: 200px;
+    left: 400px;
+    z-index: -2;
+}
+
+.skills-left .square-pink {
+    position: absolute; 
+    top: 150px;
+    left: 40px;
+    z-index: -2;
+}
+
+.skills-right .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 430px;
+    justify-content: center;
+}
+
+.skills-right .cards .card {
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid var(--text-color);
+    border-radius:  5px;
+    width: 200px;
+}
+
+.skills-right .cards .card .l1 {
+    border-bottom: 1px solid var(--text-color);
+    padding: 8px;
+    font-weight: 500;
+    color: white; 
+}
+
+.skills-right .cards .card .l2{
+    padding: 8px;
+}
+
+/* FIM DAS SKILLS */
+
+/* INICIO DO ABOUT-ME */
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.about-me .about-text {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 30px;
+    margin-top: 50px
+}
+
+.about-me .about-text {
+    text-align: left;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.about-me .abt-fct {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.facts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 100%;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.facts p {
+    border: 1px solid var(--text-color);
+    padding: 5px;
+    font-size: 14px;
+    background: var(--background);
+}
+
+.about-me .facts span {
+    color: white;
+
+}
+
+.img-about {
+    position: relative;
+}
+
+.img-about .dot-1 {
+    position: absolute;
+    top: 60px;
+    left: -5px;
+    width: 70px;
+}
+
+.img-about .dot-2 {
+    position: absolute;
+    top: 280px;
+    right: 15px ;
+    width: 80px;
+}
+
+.img-about .square-pink {
+    position: absolute;
+    z-index: -4;
+    bottom: 100px;
+    left: 0;
+    transform: rotate(-90deg);
+    width: 120px;
+}
+
+/* FIM DO ABOUT-ME */
+
+
+/* INICIO DO CONTATO */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.contact .contact-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.contact .mail {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    align-items: center;
+}
+
+.contact .mail span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.contact .mail span ion-icon{
+    font-size: 30px;
+}
+.contact .mail .here-contact {
+    font-weight: 500;
+    color: white;
+}
+
+.contact .mail span p {
+    font-size: 18px;
+}
+
+/* FIM DO CONTATO */
+
+/* INICIO DO FOOTER */
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    border-top: 1px solid var(--text-color);
+    padding-top: 32px;
+    gap: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 75vw;
+}
+
+.div-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.div-1 .p-1 {
+    display: flex;
+    gap: 24px;
+}
+
+.div-1 .p-1 span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.div-1 .p-1 span .name {
+    color: white;
+    font-weight: 500;
+}
+
+.div-1 .p-2 {
+    color: var(--primary);
+}
+
+.div-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.div-2 .midia {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.div-2 p {
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
+
+.div-2 span a ion-icon {
+    font-size: 25px;
+    color: rgb(232, 232, 232);
+    cursor: pointer;
+    transition: color 500ms, transform 500ms;
+}
+
+.div-2 span a ion-icon:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.copy {
+    padding-bottom: 25px;
+}
+
+.copy p {
+    background: #44444447;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* FIM DO FOOTER */
